@@ -1,0 +1,10 @@
+.about__column {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+
+    &:last-of-type {
+        width: 50%;
+        margin-right: 0;
+    }
+}

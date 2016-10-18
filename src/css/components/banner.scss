@@ -1,0 +1,23 @@
+.banner {
+    background-color: $color-blue;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.banner__image {
+    vertical-align: middle;
+    margin-right: 2rem;
+    // width: 40%;
+    height: auto;
+}
+
+.banner__label {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45rem;
+    font-size: 4.6rem;
+    color: #fff;
+    font-style: italic;
+}
