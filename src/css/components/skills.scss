@@ -5,3 +5,35 @@
         margin-bottom: 0;
     }
 }
+
+.skill__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.skill__progress-bar {
+    margin-top: 1.5rem;
+    background-color: #eeeeee;
+    height: 3rem;
+    border-radius: .4rem;
+}
+
+.skill__value {
+    height: 3rem;
+    border-radius: .4rem;
+}
+
+.skill__value_doc {
+    width: 90%;
+    background-color: $color_blue;
+}
+
+.skill__value_design {
+    width: 65%;
+    background-color: $color_green;
+}
+
+.skill__value_mobile {
+    width: 80%;
+    background-color: $color_yellow;
+}

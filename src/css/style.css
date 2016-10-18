@@ -72,6 +72,9 @@ body {
   border-bottom: 1px solid #eee;
   margin-bottom: 1.5rem; }
 
+.section__content {
+  padding-top: 4.5rem; }
+
 .about__column {
   width: 48%;
   float: left;
@@ -79,6 +82,37 @@ body {
   .about__column:last-of-type {
     width: 50%;
     margin-right: 0; }
+
+.skill {
+  margin-bottom: 3rem; }
+  .skill:last-of-type {
+    margin-bottom: 0; }
+
+.skill__title {
+  font-size: 1.6rem;
+  font-weight: 700; }
+
+.skill__progress-bar {
+  margin-top: 1.5rem;
+  background-color: #eeeeee;
+  height: 3rem;
+  border-radius: .4rem; }
+
+.skill__value {
+  height: 3rem;
+  border-radius: .4rem; }
+
+.skill__value_doc {
+  width: 90%;
+  background-color: #0091be; }
+
+.skill__value_design {
+  width: 65%;
+  background-color: #40c95d; }
+
+.skill__value_mobile {
+  width: 80%;
+  background-color: #d7d93f; }
 
 .header {
   padding-top: 2rem;
