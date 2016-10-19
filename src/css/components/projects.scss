@@ -1,0 +1,55 @@
+.project {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 2.4rem;
+}
+
+.project__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: $color_blue;
+    transition: opacity .6s ease 0s;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.project__link {
+    &:hover, &:focus {
+        .project__overlay {
+            opacity: 1;
+        }
+    }
+}
+
+.project__description {
+    vertical-align: middle;
+    text-align: center;
+    width: 95%;
+    color: #fff;
+}
+
+@media screen and (min-width: 960px) {
+    .project {
+        width: 24%;
+        margin-right: 1%;
+
+        &:nth-of-type(4n) {
+            margin-right: 0
+        };
+
+        &:nth-last-of-type(-n+4) {
+            margin-bottom: 0;
+        };
+    }
+}
