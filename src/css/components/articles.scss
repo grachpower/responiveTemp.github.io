@@ -85,3 +85,9 @@
     background-color: $color_blue;
     color: #fff;
 }
+
+@media screen and (max-width: 480px) {
+    .article__tags {
+        display: none;
+    }
+}

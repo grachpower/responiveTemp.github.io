@@ -342,6 +342,10 @@ body {
   background-color: #0091be;
   color: #fff; }
 
+@media screen and (max-width: 480px) {
+  .article__tags {
+    display: none; } }
+
 .blog__column {
   float: left;
   width: 46%;
