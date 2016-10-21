@@ -8,3 +8,19 @@
         margin-right: 0;
     }
 }
+
+@media screen and (max-width: 640px) {
+    .about__column {
+        width: 95%;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:last-of-type {
+            width: 95%;
+            margin-top: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

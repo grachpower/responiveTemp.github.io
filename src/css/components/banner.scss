@@ -21,3 +21,12 @@
     color: #fff;
     font-style: italic;
 }
+
+@media screen and (max-width: 768px) {
+    .banner__label {
+        display: block;
+        width: 100%;
+        font-size: 4rem;
+        text-align: center;
+    }
+}
