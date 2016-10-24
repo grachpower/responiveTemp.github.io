@@ -1,5 +1,6 @@
 .article {
     margin-bottom: 5rem;
+    position: relative;
 }
 
 .article__image {
@@ -88,7 +89,7 @@
 
 @media screen and (max-width: 480px) {
     .article {
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         border-bottom: 1px solid #000;
     }
 
@@ -100,11 +101,23 @@
         float: left;
     }
 
-    .article__date {
+    .article__tag:nth-of-type(n+4) {
         display: none;
+    }
+
+    .article__date {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     .article__content {
         width: 100%;
+    }
+
+    .article__meta {
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
     }
 }
