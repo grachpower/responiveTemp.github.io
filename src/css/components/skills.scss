@@ -37,3 +37,33 @@
     width: 80%;
     background-color: $color_yellow;
 }
+
+@media screen and (max-width: 768px) {
+    .skill {
+        margin-bottom: 2rem;
+    }
+
+    .skill__progress-bar {
+        margin-top: 1rem;
+        height: 2.5rem;
+    }
+
+    .skill__value {
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skill {
+        margin-bottom: 1.5rem;
+    }
+
+    .skill__progress-bar {
+        margin-top: .5rem;
+        height: 2rem;
+    }
+
+    .skill__value {
+        height: 2rem;
+    }
+}

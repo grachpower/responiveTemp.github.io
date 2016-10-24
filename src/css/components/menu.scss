@@ -13,12 +13,12 @@
 
 .hamburger__label {
     display: none;
-    height: 2rem;
-    width: 4.5rem;
+    height: 1rem;
+    width: 3.5rem;
     position: relative;
     background-color: transparent;
-    border-bottom: .8rem solid;
-    border-top: .8rem solid;
+    border-bottom: .5rem solid;
+    border-top: .5rem solid;
     border-color: $color_blue;
 
     &:after {
@@ -28,7 +28,7 @@
         top: 50%;
         transform: translate(0, -50%);
         width: 100%;
-        border-top: .8rem solid;
+        border-top: .5rem solid;
         border-color: inherit;
     }
 
@@ -39,7 +39,7 @@
         top: 50%;
         transform: translate(0, -50%);
         width: 100%;
-        border-top: .8rem solid;
+        border-top: .5rem solid;
         border-color: inherit;
     }
 
@@ -95,5 +95,10 @@
 
     .menu__link {
         color: $color_blue;
+        display: block;
+
+        &:hover, &:focus {
+            background-color: RGBA(255,255,255, 0.9);
+        }
     }
 }

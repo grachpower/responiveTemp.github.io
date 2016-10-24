@@ -4,4 +4,17 @@
     box-sizing: border-box;
     padding-bottom: 9rem;
     overflow: hidden;
+    padding-top: 9.375rem;
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        padding-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page {
+        padding-bottom: 4.8rem;
+    }
 }

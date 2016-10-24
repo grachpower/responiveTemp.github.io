@@ -87,7 +87,24 @@
 }
 
 @media screen and (max-width: 480px) {
-    .article__tags {
+    .article {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #000;
+    }
+
+    .article__author {
         display: none;
+    }
+
+    .article__tags {
+        float: left;
+    }
+
+    .article__date {
+        display: none;
+    }
+
+    .article__content {
+        width: 100%;
     }
 }
