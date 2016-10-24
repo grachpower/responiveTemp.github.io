@@ -1,14 +1,9 @@
 .project {
     box-sizing: border-box;
-    border-style: solid;
-    border-color: transparent;
     position: relative;
     overflow: hidden;
     float: left;
-    border-left-width: 1rem;
-    border-right-width: 1rem;
-    border-top-width: 1rem;
-    border-bottom-width: 1rem;
+    border: 1rem solid transparent;
 }
 
 .project__preview {
