@@ -89,8 +89,8 @@
 
 @media screen and (max-width: 480px) {
     .article {
-        padding-bottom: 4rem;
-        border-bottom: 1px solid #000;
+        padding-bottom: 6rem;
+        border-bottom: 1px solid #eee;
     }
 
     .article__author {
@@ -109,6 +109,16 @@
         position: absolute;
         top: 0;
         right: 0;
+        width: auto;
+    }
+
+    .article__day {
+        float: left;
+        padding: .5rem .3rem;
+    }
+
+    .article__month {
+        float: left;
     }
 
     .article__content {
@@ -117,7 +127,7 @@
 
     .article__meta {
         position: absolute;
-        bottom: 1rem;
+        bottom: 2rem;
         left: 0;
     }
 }

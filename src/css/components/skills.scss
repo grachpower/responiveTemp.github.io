@@ -54,8 +54,12 @@
 }
 
 @media screen and (max-width: 480px) {
+    .skills {
+        padding-top: 2rem;
+    }
+
     .skill {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .skill__progress-bar {

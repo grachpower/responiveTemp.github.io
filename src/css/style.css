@@ -49,12 +49,14 @@ body {
 .hamburger__label {
   display: none;
   height: 1rem;
-  width: 3.5rem;
+  width: 3rem;
   position: relative;
   background-color: transparent;
   border-bottom: .5rem solid;
   border-top: .5rem solid;
-  border-color: #0091be; }
+  border-color: #0091be;
+  transition: border .7s ease 0s;
+  transition: border .7s ease 0s; }
   .hamburger__label:after {
     content: "";
     display: block;
@@ -63,7 +65,8 @@ body {
     transform: translate(0, -50%);
     width: 100%;
     border-top: .5rem solid;
-    border-color: inherit; }
+    border-color: inherit;
+    transition: transform .7s ease 0s; }
   .hamburger__label:before {
     content: "";
     display: block;
@@ -72,17 +75,18 @@ body {
     transform: translate(0, -50%);
     width: 100%;
     border-top: .5rem solid;
-    border-color: inherit; }
+    border-color: inherit;
+    transition: transform .7s ease 0s; }
 
 .hamburger__checkbox:checked + .hamburger__label {
   border-top: 0;
   border-bottom: 0;
-  border-color: #0091be;
+  border-color: #fff;
   z-index: 3; }
   .hamburger__checkbox:checked + .hamburger__label:before {
-    transform: rotate(45deg); }
+    transform: rotate(135deg); }
   .hamburger__checkbox:checked + .hamburger__label:after {
-    transform: rotate(-45deg); }
+    transform: rotate(-135deg); }
 
 .hamburger__checkbox:checked ~ .menu__list {
   display: block;
@@ -91,7 +95,7 @@ body {
   left: 0;
   width: 100vw;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #0091be;
   z-index: 2; }
 
 @media screen and (max-width: 640px) {
@@ -106,12 +110,20 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-top: 1rem; }
   .menu__link {
-    color: #0091be;
-    display: block; }
+    color: #fff;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3rem;
+    border-bottom: 1px solid #fff; }
+    .menu__link:last-of-type {
+      border-bottom: 0; }
     .menu__link:hover, .menu__link:focus {
-      background-color: RGBA(255, 255, 255, 0.9); } }
+      background-color: #fff; } }
 
 .banner {
   background-color: #0091be;
@@ -161,7 +173,7 @@ body {
     padding-bottom: 4rem;
     padding-top: 4rem; }
   .section__content {
-    padding-top: .5rem; }
+    padding-top: 1rem; }
   .section__title {
     margin-bottom: 0;
     padding-bottom: 1.5rem; } }
@@ -184,7 +196,6 @@ body {
 @media screen and (max-width: 640px) {
   .about__column {
     width: 95%;
-    margin-top: 1.5rem;
     margin-left: auto;
     margin-right: auto; }
     .about__column:last-of-type {
@@ -234,8 +245,10 @@ body {
     height: 2.5rem; } }
 
 @media screen and (max-width: 480px) {
+  .skills {
+    padding-top: 2rem; }
   .skill {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 2.5rem; }
   .skill__progress-bar {
     margin-top: .5rem;
     height: 2rem; }
@@ -363,8 +376,8 @@ body {
 
 @media screen and (max-width: 480px) {
   .article {
-    padding-bottom: 4rem;
-    border-bottom: 1px solid #000; }
+    padding-bottom: 6rem;
+    border-bottom: 1px solid #eee; }
   .article__author {
     display: none; }
   .article__tags {
@@ -374,12 +387,18 @@ body {
   .article__date {
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 0;
+    width: auto; }
+  .article__day {
+    float: left;
+    padding: .5rem .3rem; }
+  .article__month {
+    float: left; }
   .article__content {
     width: 100%; }
   .article__meta {
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
     left: 0; } }
 
 .blog__column {
@@ -398,6 +417,44 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/map.jpg); }
+
+.page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background-color: #0091be;
+  animation-name: page_preloader;
+  animation-duration: 2.5s;
+  animation-fill-mode: both; }
+  .page-preloader:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 64, 187, 0.8);
+    left: 0;
+    top: 0;
+    animation-name: slide_up;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    z-index: 999; }
+
+@keyframes page_preloader {
+  100% {
+    visibility: hidden;
+    z-index: -10; } }
+
+@keyframes slide_up {
+  0% {
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
 
 .header {
   position: fixed;
