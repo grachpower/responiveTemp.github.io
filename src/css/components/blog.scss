@@ -8,5 +8,7 @@
 @media screen and (max-width: 640px) {
     .blog__column {
         width: 96%;
+        border-top: 1px solid #eee;
+        padding-top: 4rem;
     }
 }

@@ -49,14 +49,13 @@ body {
 .hamburger__label {
   display: none;
   height: 1rem;
-  width: 3rem;
+  width: 2.5rem;
   position: relative;
   background-color: transparent;
   border-bottom: .5rem solid;
   border-top: .5rem solid;
   border-color: #0091be;
-  transition: border .7s ease 0s;
-  transition: border .7s ease 0s; }
+  transition: border-width .4s ease .5s; }
   .hamburger__label:after {
     content: "";
     display: block;
@@ -184,7 +183,9 @@ body {
     padding-bottom: 3rem;
     padding-top: 3rem; }
   .section__title {
-    padding-bottom: 1rem; } }
+    padding-bottom: .5rem; }
+  .section__content {
+    padding-top: 1.5rem; } }
 
 .about__column {
   width: 48%;
@@ -377,8 +378,8 @@ body {
 
 @media screen and (max-width: 480px) {
   .article {
-    padding-bottom: 6rem;
-    border-bottom: 1px solid #eee; }
+    padding-bottom: 7rem;
+    margin-bottom: 0; }
   .article__author {
     display: none; }
   .article__tags {
@@ -392,7 +393,7 @@ body {
     width: auto; }
   .article__day {
     float: left;
-    padding: .5rem .3rem; }
+    padding: .5rem .8rem; }
   .article__month {
     float: left; }
   .article__content {
@@ -410,7 +411,9 @@ body {
 
 @media screen and (max-width: 640px) {
   .blog__column {
-    width: 96%; } }
+    width: 96%;
+    border-top: 1px solid #eee;
+    padding-top: 4rem; } }
 
 .map {
   max-height: 60vh;

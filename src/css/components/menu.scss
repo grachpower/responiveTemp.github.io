@@ -14,14 +14,13 @@
 .hamburger__label {
     display: none;
     height: 1rem;
-    width: 3rem;
+    width: 2.5rem;
     position: relative;
     background-color: transparent;
     border-bottom: .5rem solid;
     border-top: .5rem solid;
     border-color: $color_blue;
-    transition: border .7s ease 0s;
-    transition: border .7s ease 0s;
+    transition: border-width .4s ease .5s;
 
     &:after {
         content: "";
