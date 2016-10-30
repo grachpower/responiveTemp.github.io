@@ -6,9 +6,6 @@
     height: 100vh;
     z-index: 998;
     background-color: #fff;
-    animation-name: page_preloader;
-    animation-duration: 2.2s;
-    animation-fill-mode: both;
 
     &:before {
         content: "";
@@ -20,17 +17,11 @@
         left: 0;
         top: 0;
         animation-name: slide_up;
-        animation-duration: 2s;
-        animation-fill-mode: both;
+        animation-duration: 3s;
+				animation-iteration-count: infinite;
         animation-timing-function: ease-in;
         animation-delay: 0s;
         z-index: 999;
-    }
-}
-
-@keyframes page_preloader {
-    100% {
-        visibility: hidden;
     }
 }
 
@@ -39,6 +30,6 @@
         transform: translate3d(0, 100%, 0);
     }
     100% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, -100%, 0);
     }
 }
