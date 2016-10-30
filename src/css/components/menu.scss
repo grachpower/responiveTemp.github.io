@@ -20,7 +20,7 @@
     border-bottom: .5rem solid;
     border-top: .5rem solid;
     border-color: $color_blue;
-    transition: border-width .4s ease .5s;
+    transition: border-color .6s ease .5s;
 
     &:after {
         content: "";
@@ -30,7 +30,7 @@
         transform: translate(0, -50%);
         width: 100%;
         border-top: .5rem solid;
-        border-color: inherit;
+        border-color: $color_blue;
         transition: transform .7s ease 0s;
     }
 
@@ -42,26 +42,22 @@
         transform: translate(0, -50%);
         width: 100%;
         border-top: .5rem solid;
-        border-color: inherit;
+        border-color: $color_blue;
         transition: transform .7s ease 0s;
-    }
-
-    &:hover, &:focus {
-        // border-color: rgb(51, 92, 161);
     }
 }
 
 .hamburger__checkbox:checked + .hamburger__label {
-    border-top: 0;
-    border-bottom: 0;
-    border-color: #fff;
+    border-color: transparent;
 
     &:before {
         transform: rotate(135deg);
+        border-color: #fff;
     }
 
     &:after {
         transform: rotate(-135deg);
+        border-color: #fff;
     }
     z-index: 3;
 }
