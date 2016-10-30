@@ -189,8 +189,9 @@ body {
 
 .about__column {
   width: 48%;
-  float: left;
-  margin-right: 2%; }
+  display: inline-block;
+  margin-right: 1%;
+  vertical-align: middle; }
   .about__column:last-of-type {
     width: 50%;
     margin-right: 0; }
@@ -382,14 +383,16 @@ body {
   background-color: #0091be;
   color: #fff; }
 
+@media screen and (max-width: 768px) {
+  .article__author {
+    display: none; }
+  .article__tags {
+    float: left; } }
+
 @media screen and (max-width: 480px) {
   .article {
     padding-bottom: 8rem;
     margin-bottom: 0; }
-  .article__author {
-    display: none; }
-  .article__tags {
-    float: left; }
   .article__tag:nth-of-type(n+4) {
     display: none; }
   .article__date {

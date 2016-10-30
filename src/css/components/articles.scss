@@ -87,18 +87,20 @@
     color: #fff;
 }
 
-@media screen and (max-width: 480px) {
-    .article {
-        padding-bottom: 8rem;
-        margin-bottom: 0;
-    }
-
+@media screen and (max-width: 768px) {
     .article__author {
         display: none;
     }
 
     .article__tags {
         float: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .article {
+        padding-bottom: 8rem;
+        margin-bottom: 0;
     }
 
     .article__tag:nth-of-type(n+4) {

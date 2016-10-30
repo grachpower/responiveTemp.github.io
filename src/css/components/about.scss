@@ -1,7 +1,8 @@
 .about__column {
     width: 48%;
-    float: left;
-    margin-right: 2%;
+    display: inline-block;
+    margin-right: 1%;
+    vertical-align: middle;
 
     &:last-of-type {
         width: 50%;
