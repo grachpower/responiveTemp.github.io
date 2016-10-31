@@ -7,11 +7,11 @@
 }
 
 .skill__title {
-    font-size: 1.6rem;
     font-weight: 700;
 }
 
 .skill__progress-bar {
+    position: relative;
     margin-top: 1.5rem;
     background-color: #eeeeee;
     height: 3rem;
@@ -19,8 +19,12 @@
 }
 
 .skill__value {
-    height: 3rem;
+    height: 100%;
     border-radius: .4rem;
+}
+
+.skill__value_num {
+    display: none;
 }
 
 .skill__value_doc {

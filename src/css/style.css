@@ -21,7 +21,6 @@ body {
   clear: both; }
 
 .logo {
-  font-size: 2.4rem;
   margin-left: .8rem;
   float: left; }
 
@@ -55,7 +54,7 @@ body {
   border-bottom: .5rem solid;
   border-top: .5rem solid;
   border-color: #0091be;
-  transition: border-color .6s ease .5s; }
+  transition: border-color .6s ease .7s; }
   .hamburger__label:after {
     content: "";
     display: block;
@@ -126,7 +125,7 @@ body {
 
 .banner {
   background-color: #0091be;
-  padding-top: 6rem;
+  padding-top: 15.2rem;
   padding-bottom: 5rem;
   text-align: center; }
 
@@ -145,6 +144,8 @@ body {
   font-style: italic; }
 
 @media screen and (max-width: 768px) {
+  .banner__image {
+    margin-right: 0; }
   .banner__label {
     display: block;
     width: 100%;
@@ -155,12 +156,11 @@ body {
 .section {
   padding-top: 5rem;
   padding-bottom: 4.5rem;
-  border-bottom: 1px solid #eee;
   box-shadow: 0 -0.5rem 2rem #eee inset;
+  border-bottom: 1px solid #eee;
   padding: 6.0rem 0; }
 
 .section__title {
-  font-size: 3.5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #eee;
   margin-bottom: 1.5rem; }
@@ -189,8 +189,8 @@ body {
 
 .about__column {
   width: 48%;
-  display: inline-block;
-  margin-right: 1%;
+  float: left;
+  margin-right: 2%;
   vertical-align: middle; }
   .about__column:last-of-type {
     width: 50%;
@@ -213,18 +213,21 @@ body {
     margin-bottom: 0; }
 
 .skill__title {
-  font-size: 1.6rem;
   font-weight: 700; }
 
 .skill__progress-bar {
+  position: relative;
   margin-top: 1.5rem;
   background-color: #eeeeee;
   height: 3rem;
   border-radius: .4rem; }
 
 .skill__value {
-  height: 3rem;
+  height: 100%;
   border-radius: .4rem; }
+
+.skill__value_num {
+  display: none; }
 
 .skill__value_doc {
   width: 90%;
@@ -260,19 +263,18 @@ body {
 
 .project {
   position: relative;
-  overflow: hidden;
   float: left;
   margin-right: 1vw;
-  margin-bottom: 1vw; }
-
-.project__preview {
-  width: 100%;
-  height: auto; }
+  margin-bottom: 1vw;
+  font-size: 0; }
+  .project:hover .project__overlay, .project:focus .project__overlay {
+    opacity: 1; }
 
 .project__overlay {
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   text-align: center;
   opacity: 0;
   top: 0;
@@ -285,14 +287,12 @@ body {
     height: 100%;
     vertical-align: middle; }
 
-.project__link:hover .project__overlay, .project__link:focus .project__overlay {
-  opacity: 1; }
-
 .project__description {
   vertical-align: middle;
   text-align: center;
   width: 95%;
-  color: #fff; }
+  color: #fff;
+  font-size: 1.6rem; }
 
 @media screen and (max-width: 480px) {
   .project {
@@ -317,8 +317,6 @@ body {
   position: relative; }
 
 .article__image {
-  width: 100%;
-  height: auto;
   margin-bottom: 2rem; }
 
 .article__body {
@@ -438,34 +436,67 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 998;
-  background-color: #fff; }
-  .page-preloader:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #0091be;
-    left: 0;
-    top: 0;
-    animation-name: slide_up;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-delay: 0s;
-    z-index: 999; }
+  background-color: #0091be; }
 
-@keyframes slide_up {
+.preloader__item {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #cae9f4;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  z-index: 999; }
+
+.preloader__item1 {
+  animation-name: orbit;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: 0s; }
+
+.preloader__item2 {
+  animation-name: orbit;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: 0.5s; }
+
+.preloader__item3 {
+  animation-name: orbit;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: 1s; }
+
+.preloader__item4 {
+  animation-name: orbit;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: 1.5s; }
+
+@keyframes orbit {
   0% {
-    transform: translate3d(0, 100%, 0); }
+    transform: rotate(0deg) translate3d(150%, 0, 0); }
   100% {
-    transform: translate3d(0, -100%, 0); } }
+    transform: rotate(360deg) translate3d(150%, 0, 0); } }
+
+.responsive-image {
+  max-width: 100%;
+  height: auto; }
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 5px solid #fad027;
@@ -477,9 +508,6 @@ body {
   margin-top: 1.5rem; }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background-color: #3c3838;
   color: #fff;
   padding: 3.5rem 0;
@@ -504,6 +532,7 @@ body {
 .page {
   position: relative;
   min-width: 300px;
+  min-height: 100vh;
   box-sizing: border-box;
   padding-bottom: 9rem;
   overflow: hidden;
@@ -524,11 +553,17 @@ body {
 h1, h2, h3 {
   font-weight: 400; }
 
-.title__middle {
+.title_tiny {
+  font-size: 1.6rem; }
+
+.title_small {
+  font-size: 2.4rem; }
+
+.title_medium {
   font-size: 3rem; }
 
-.title__small {
-  font-size: 2.4rem; }
+.title_large {
+  font-size: 3.5rem; }
 
 a {
   text-decoration: none;

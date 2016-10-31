@@ -36,7 +36,8 @@ gulp.task('sass-watch', function() {
         gulp.src('src/css/style.scss')
             .pipe(sass().on('error', sass.logError))
             .pipe(autoprefixer({
-                browsers: ['last 2 versions'],
+                browsers: ['IE 11','last 2 iOS versions','last 1 Chrome versions','last 1 Firefox versions',
+                    'last 1 Safari versions','last 1 Opera versions','last 1 Edge versions','Android >= 4.4'],
                 cascade: false
             }))
             .pipe(gulp.dest('src/css'));

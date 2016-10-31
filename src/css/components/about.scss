@@ -1,7 +1,7 @@
 .about__column {
     width: 48%;
-    display: inline-block;
-    margin-right: 1%;
+    float: left;
+    margin-right: 2%;
     vertical-align: middle;
 
     &:last-of-type {

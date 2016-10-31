@@ -1,20 +1,22 @@
 .project {
     position: relative;
-    overflow: hidden;
     float: left;
     margin-right: 1vw;
     margin-bottom: 1vw;
-}
+    font-size: 0;
 
-.project__preview {
-    width: 100%;
-    height: auto;
+    &:hover, &:focus {
+        .project__overlay {
+            opacity: 1;
+        }
+    }
 }
 
 .project__overlay {
     position: absolute;
     height: 100%;
     width: 100%;
+    overflow: hidden;
     text-align: center;
     opacity: 0;
     top: 0;
@@ -30,19 +32,12 @@
     }
 }
 
-.project__link {
-    &:hover, &:focus {
-        .project__overlay {
-            opacity: 1;
-        }
-    }
-}
-
 .project__description {
     vertical-align: middle;
     text-align: center;
     width: 95%;
     color: #fff;
+    font-size: 1.6rem;
 }
 
 @media screen and (max-width: 480px) {

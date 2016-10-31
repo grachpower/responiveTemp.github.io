@@ -2,12 +2,18 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
-// 16, 24, 30, 35, 14
+.title_tiny {
+    font-size: 1.6rem;
+}
 
-.title__middle {
+.title_small {
+    font-size: 2.4rem;
+}
+
+.title_medium {
     font-size: 3rem;
 }
 
-.title__small {
-    font-size: 2.4rem;
+.title_large {
+    font-size: 3.5rem;
 }

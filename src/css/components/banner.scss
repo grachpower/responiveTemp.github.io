@@ -1,6 +1,6 @@
 .banner {
     background-color: $color-blue;
-    padding-top: 6rem;
+    padding-top: 15.2rem;
     padding-bottom: 5rem;
     text-align: center;
 }
@@ -8,7 +8,6 @@
 .banner__image {
     vertical-align: middle;
     margin-right: 2rem;
-    // width: 40%;
     height: auto;
 }
 
@@ -23,6 +22,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .banner__image {
+        margin-right: 0;
+    }
+
     .banner__label {
         display: block;
         width: 100%;
