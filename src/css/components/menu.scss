@@ -74,6 +74,10 @@
 }
 
 @media screen and (max-width: 640px) {
+    .menu {
+        margin-right: .8rem;
+    }
+
     .hamburger__label {
         display: block;
     }
