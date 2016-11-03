@@ -11,11 +11,12 @@
 
 .article__body {
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .article__date {
     width: 10%;
-    float: left;
 }
 
 .article__day {
@@ -34,17 +35,16 @@
 .article__content {
     width: 85%;
     text-align: left;
-    float: right;
 }
 
 .article__meta {
     margin-top: 2rem;
     font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .article__author {
-    float: left;
-
     &:before {
         content: "";
         display: inline-block;
@@ -62,8 +62,6 @@
 }
 
 .article__tags {
-    float: right;
-
     &:before {
         content: "";
         display: inline-block;
@@ -91,10 +89,6 @@
     .article__author {
         display: none;
     }
-
-    .article__tags {
-        float: left;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -112,15 +106,15 @@
         top: 0;
         right: 0;
         width: auto;
+        display: flex;
     }
 
     .article__day {
-        float: left;
-        padding: .5rem 1rem;
+        padding: .8rem 1rem;
     }
 
     .article__month {
-        float: left;
+        padding: .8rem 1rem;
     }
 
     .article__content {
