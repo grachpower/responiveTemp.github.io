@@ -99,7 +99,10 @@ body {
     border-color: #fff; }
 
 .hamburger__checkbox:checked ~ .menu__list {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   position: fixed;
   top: 0;
   left: 0;
@@ -115,10 +118,8 @@ body {
     display: block; }
   .menu__list {
     display: none;
-    line-height: 4;
-    padding-top: 6rem; }
+    line-height: 4; }
   .menu__item {
-    display: block;
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
