@@ -22,7 +22,7 @@
 }
 
 .preloader__item1 {
-    animation-name: orbit;
+    animation-name: orbit-top-left;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
@@ -31,37 +31,76 @@
 }
 
 .preloader__item2 {
-    animation-name: orbit;
+    animation-name: orbit-top-right;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: 0s;
 }
 
 .preloader__item3 {
-    animation-name: orbit;
+    animation-name: orbit-down-left;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-fill-mode: both;
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 
 .preloader__item4 {
-    animation-name: orbit;
+    animation-name: orbit-down-right;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-fill-mode: both;
-    animation-delay: 1.5s;
+    animation-delay: 0s;
 }
 
-@keyframes orbit {
+@keyframes orbit-top-left {
     0% {
-        transform: rotate(0deg) translate3d(150%, 0, 0);
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-180deg) translate3d(150%, 150%, 0);
     }
     100% {
-        transform: rotate(360deg) translate3d(150%, 0, 0);
+        transform: rotate(-360deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes orbit-top-right {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(180deg) translate3d(150%, -150%, 0);
+    }
+    100% {
+        transform: rotate(360deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes orbit-down-left {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-180deg) translate3d(-150%, -150%, 0);
+    }
+    100% {
+        transform: rotate(-360deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes orbit-down-right {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(180deg) translate3d(-150%, 150%, 0);
+    }
+    100% {
+        transform: rotate(360deg) translate3d(0, 0, 0);
     }
 }
